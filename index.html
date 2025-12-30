@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>VANGINES - 黑头刮刀 & 冰敷滚轮</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/logo.png" alt="VANGINES Logo">
+                </div>
+                
+                <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="#home" data-i18n="nav.home">首页</a></li>
+                        <li><a href="#product" data-i18n="nav.product">产品展示</a></li>
+                        <li><a href="#features" data-i18n="nav.features">功能介绍</a></li>
+                        <li><a href="#usage" data-i18n="nav.usage">使用方法</a></li>
+                        <li><a href="#story" data-i18n="nav.story">品牌故事</a></li>
+                    </ul>
+                </nav>
+
+                <div class="lang-switch">
+                    <button class="lang-btn active" onclick="switchLanguage('zh')" data-lang="zh">中文</button>
+                    <button class="lang-btn" onclick="switchLanguage('en')" data-lang="en">EN</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero轮播区域 -->
+    <section id="home" class="hero-section">
+        <div class="swiper-container hero-swiper">
+            <div class="swiper-wrapper">
+                <!-- 轮播1 -->
+                <div class="swiper-slide">
+                    <div class="hero-slide">
+                        <div class="hero-slide-left">
+                            <img src="images/banner-1.png" alt="VANGINES Product">
+                        </div>
+                        <div class="hero-slide-right">
+                            <div class="hero-content">
+                                <h1 data-i18n="hero.title">Vangines黑头刮刀 & 冰敷滚轮</h1>
+                                <p class="hero-slogan" data-i18n="hero.slogan">Care Simply, Love Gently</p>
+                                <p data-i18n="hero.description">深层清洁毛孔，有效去除黑头、白头及油脂，让肌肤恢复自然透亮。安全不伤肤。</p>
+                                <div class="hero-buttons">
+                                    <a href="#features" class="btn-primary" data-i18n="hero.btn1">了解更多</a>
+                                    <a href="#usage" class="btn-secondary" data-i18n="hero.btn2">使用方法</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 轮播2 -->
+                <div class="swiper-slide">
+                    <div class="hero-slide">
+                        <div class="hero-slide-left">
+                            <img src="images/banner-2.jpg" alt="VANGINES Design">
+                        </div>
+                        <div class="hero-slide-right">
+                            <div class="hero-content">
+                                <h1 data-i18n="hero.slide2.title">滚轮冰敷消肿+黑头铲洁净</h1>
+                                <p class="hero-slogan" data-i18n="hero.slide2.slogan">温柔呵护每一寸肌肤</p>
+                                <div class="hero-buttons">
+                                    <a href="#features" class="btn-primary" data-i18n="hero.btn1">了解更多</a>
+                                    <a href="#usage" class="btn-secondary" data-i18n="hero.btn2">使用方法</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 轮播3 -->
+                <div class="swiper-slide">
+                    <div class="hero-slide">
+                        <div class="hero-slide-left">
+                            <img src="images/banner-3.png" alt="VANGINES Philosophy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 轮播控制 -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+
+    <!-- 产品展示 -->
+    <section id="product" class="section product-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="product.title">产品展示</h2>
+                <p data-i18n="product.subtitle">创新二合一设计，兼顾美学与实用，每一处细节都为舒适体验打造</p>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <img src="images/product-1.jpg" alt="产品整体展示" onerror="this.src='images/logo.png'">
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <img src="images/product-2.jpg" alt="冰敷滚轮细节" onerror="this.src='images/logo.png'">
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <img src="images/product-3.jpg" alt="黑头铲功能区" onerror="this.src='images/logo.png'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 功能介绍 -->
+    <section id="features" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="features.title">功能介绍</h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-card-image">
+                        <img src="images/feature-1.jpg" alt="冰敷滚轮" onerror="this.src='images/logo.png'">
+                    </div>
+                    <div class="feature-card-content">
+                        <h3 data-i18n="features.feature1.title">冰敷滚轮</h3>
+                        <p data-i18n="features.feature1.content">304不锈钢镜面滚轮，冷藏后使用可快速收缩毛孔、镇静泛红肌肤，减轻水肿和敏感问题。滚轮直径3.2cm黄金尺寸，贴合面部曲线，轻轻滚动即可促进血液循环，搭配护肤品使用可提升吸收效果30%以上。</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-card-image">
+                        <img src="images/feature-2.jpg" alt="黑头铲" onerror="this.src='images/logo.png'">
+                    </div>
+                    <div class="feature-card-content">
+                        <h3 data-i18n="features.feature2.title">黑头铲</h3>
+                        <p data-i18n="features.feature2.content">采用304不锈钢黑头铲，超薄0.8mm铲头设计，45°斜角贴合肌肤可深入清洁毛孔内的黑头、白头、油脂粒和老化角质，不伤肤且清洁彻底，搭配热敷使用效果更佳。</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-card-image">
+                        <img src="images/feature-3.jpg" alt="替换头设计" onerror="this.src='images/logo.png'">
+                    </div>
+                    <div class="feature-card-content">
+                        <h3 data-i18n="features.feature3.title">替换头设计</h3>
+                        <p data-i18n="features.feature3.content">配备两种不同纹理硅胶替换头:点状适合日常按摩，波浪纹可深层放松肌肉。硅胶采用食品级材质，安全无异味，替换简单，满足不同按摩需求。</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-card-image">
+                        <img src="images/feature-4.jpg" alt="人体工学设计" onerror="this.src='images/logo.png'">
+                    </div>
+                    <div class="feature-card-content">
+                        <h3 data-i18n="features.feature4.title">人体工学设计</h3>
+                        <p data-i18n="features.feature4.content">基于1000+人手数据研发的握柄曲线，16.5cm黄金长度，38g轻量化设计，无论是单手操作还是多角度清洁，都能轻松掌控，长时间使用不疲劳。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 使用方法 -->
+    <section id="usage" class="section usage-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="usage.title">使用方法</h2>
+            </div>
+
+            <div class="usage-steps">
+                <!-- 步骤1 -->
+                <div class="usage-step">
+                    <div class="usage-step-wrapper">
+                        <div class="usage-step-image">
+                            <img src="images/step-1.jpg" alt="使用前准备">
+                        </div>
+                        <div class="usage-step-content">
+                            <h3 data-i18n="usage.step1.title">第一步：使用前准备</h3>
+                            <ol data-i18n-list="usage.step1">
+                                <li data-i18n="usage.step1.item1">滚轮冷藏：放入冰箱冷藏室（0-10℃）冷藏 15-20 分钟（勿冷冻）</li>
+                                <li data-i18n="usage.step1.item2">面部清洁：洁面后，用热毛巾热敷面部 3-5 分钟，打开毛孔</li>
+                                <li data-i18n="usage.step1.item3">工具检查：检查铲头是否干净、无损坏</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 步骤2 -->
+                <div class="usage-step">
+                    <div class="usage-step-wrapper">
+                        <div class="usage-step-image">
+                            <img src="images/step-2.jpg" alt="深层清洁">
+                        </div>
+                        <div class="usage-step-content">
+                            <h3 data-i18n="usage.step2.title">第二步：深层清洁（黑头铲使用）</h3>
+                            <ol data-i18n-list="usage.step2">
+                                <li data-i18n="usage.step2.item1">手持握柄，黑头铲以 45° 角贴合肌肤，从下巴向鼻翼、额头向眉心轻轻滑动</li>
+                                <li data-i18n="usage.step2.item2">重点清洁黑头重灾区（鼻翼、下巴），每处滑动不超过 2 次，力度轻柔</li>
+                                <li data-i18n="usage.step2.item3">清洁后用干净化妆棉擦拭面部残留污垢，轻拍清水洗净</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 步骤3 -->
+                <div class="usage-step">
+                    <div class="usage-step-wrapper">
+                        <div class="usage-step-image">
+                            <img src="images/step-3.jpg" alt="冰敷舒缓">
+                        </div>
+                        <div class="usage-step-content">
+                            <h3 data-i18n="usage.step3.title">第三步：冰敷舒缓（滚轮使用）</h3>
+                            <ol data-i18n-list="usage.step3">
+                                <li data-i18n="usage.step3.item1">取出冷藏滚轮，从面部中央向两侧轻轻滚动</li>
+                                <li data-i18n="usage.step3.item2">每部位滚动 3-5 次，重点按摩泛红、毛孔粗大区域，舒缓镇静</li>
+                                <li data-i18n="usage.step3.item3">滚轮使用后，正常涂抹精华、乳液、面霜，促进吸收</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 步骤4 -->
+                <div class="usage-step">
+                    <div class="usage-step-wrapper">
+                        <div class="usage-step-image">
+                            <img src="images/step-4.jpg" alt="工具清洁收纳">
+                        </div>
+                        <div class="usage-step-content">
+                            <h3 data-i18n="usage.step4.title">第四步：工具清洁收纳</h3>
+                            <ol data-i18n-list="usage.step4">
+                                <li data-i18n="usage.step4.item1">滚轮、黑头铲、硅胶头，用温水 + 中性清洁剂冲洗干净</li>
+                                <li data-i18n="usage.step4.item2">用干净毛巾擦干，避免水渍残留；硅胶头可定期高温消毒（≤60℃）</li>
+                                <li data-i18n="usage.step4.item3">放入收纳盒，置于阴凉干燥处，避免阳光直射</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <!-- 重要注意事项 -->
+                <div class="notes-section">
+                    <h3 data-i18n="usage.notes.title">重要注意事项</h3>
+                    <ol>
+                        <li data-i18n="usage.notes.item1">敏感肌初次使用前，建议先在耳后做皮肤测试，无不适再上脸</li>
+                        <li data-i18n="usage.notes.item2">滚轮冷藏时间不超过 2 小时，避免冻伤肌肤；禁止用滚轮直接接触眼周</li>
+                        <li data-i18n="usage.notes.item3">黑头铲禁止用力按压，以免损伤角质层；破损、发炎肌肤暂停使用</li>
+                        <li data-i18n="usage.notes.item4">每周使用 2-3 次为宜，过度清洁易损伤肌肤屏障，孕妇可正常使用</li>
+                        <li data-i18n="usage.notes.item5">工具专人专用，避免交叉使用，硅胶替换头建议半年更换 1 次</li>
+                    </ol>
+                </div>
+
+                <!-- 使用场景 -->
+                <div class="section-title">
+                    <h2 data-i18n="usage.scenarios.title">使用场景</h2>
+                </div>
+
+                <div class="scenarios-grid">
+                    <div class="scenario-card">
+                        <div class="scenario-card-image">
+                            <img src="images/scene-1.jpg" alt="晨间护肤场景">
+                        </div>
+                        <div class="scenario-card-content">
+                            <h4 data-i18n="usage.scenarios.scenario1.title">晨间护肤场景</h4>
+                            <p data-i18n="usage.scenarios.scenario1.content">晨起水肿星人必备，冷藏滚轮 1 分钟消肿，收缩毛孔，后续底妆不卡粉、更服帖，开启精致一天</p>
+                        </div>
+                    </div>
+
+                    <div class="scenario-card">
+                        <div class="scenario-card-image">
+                            <img src="images/scene-2.jpg" alt="晚间护肤场景">
+                        </div>
+                        <div class="scenario-card-content">
+                            <h4 data-i18n="usage.scenarios.scenario2.title">晚间护肤场景</h4>
+                            <p data-i18n="usage.scenarios.scenario2.content">洁面后用黑头铲清洁毛孔，再用滚轮舒缓肌肤，提升精华吸收效率，夜间修护事半功倍</p>
+                        </div>
+                    </div>
+
+                    <div class="scenario-card">
+                        <div class="scenario-card-image">
+                            <img src="images/scene-3.png" alt="出差旅行场景">
+                        </div>
+                        <div class="scenario-card-content">
+                            <h4 data-i18n="usage.scenarios.scenario3.title">出差旅行场景</h4>
+                            <p data-i18n="usage.scenarios.scenario3.content">轻量化设计（38g），无需插电，简单收纳，应对出差水土不服、旅行晒后泛红，随身呵护肌肤</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 品牌故事 -->
+    <section id="story" class="section brand-story">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="story.title">品牌故事</h2>
+            </div>
+
+            <div class="story-wrapper">
+                <div class="story-image">
+                    <img src="images/brand.png" alt="VANGINES品牌故事">
+                </div>
+                
+                <div class="story-content">
+                    <p data-i18n="story.p1">VANGINES诞生于2025年，源于创始人对"简约而不简单"的护肤理念的追求。我们发现，现代女性的化妆台上总是堆满了各种护肤工具，复杂的使用流程让护肤变成了一种负担。</p>
+                    
+                    <p data-i18n="story.p2">为此，我们集结了工业设计、皮肤科学、人体工学领域的专业团队，耗时18个月，经过5轮产品迭代，终于将冰敷滚轮与黑头铲这两种高频使用的护肤工具巧妙结合，打造出这款二合一产品。</p>
+                    
+                    <p data-i18n="story.p3">"Care simply, Love Gently"不仅是我们的口号，更是我们的产品哲学。我们坚持选用食品级安全材质，每一个弧度、每一个尺寸都经过精准测算，只为让您在护肤过程中，既能享受高效的护理效果，又能感受到温柔与舒适。</p>
+                    
+                    <p data-i18n="story.p4">VANGINES相信，真正的轻奢护肤，不是堆砌昂贵的产品，而是用简约的方式，给肌肤最需要的呵护。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer>
+        <div class="container">
+            <p data-i18n="footer.text">VANGINES 始终坚持 "安全、温和、有效" 的护肤理念，每一款产品都经过严格质检，只为给你轻奢护肤体验。</p>
+            <p style="margin-top: 20px;">&copy; 2025 VANGINES. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 引入JS -->
+    <script src="js/flexible.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script>
+        // 初始化Hero轮播
+        var heroSwiper = new Swiper('.hero-swiper', {
+            pagination: '.hero-swiper .swiper-pagination',
+            nextButton: '.hero-swiper .swiper-button-next',
+            prevButton: '.hero-swiper .swiper-button-prev',
+            paginationClickable: true,
+            loop: true,
+            autoplay: 5000,
+            speed: 800,
+            effect: 'fade'
+        });
+
+        // 中英文翻译数据
+        const translations = {
+            zh: {
+                'nav.home': '首页',
+                'nav.product': '产品展示',
+                'nav.features': '功能介绍',
+                'nav.usage': '使用方法',
+                'nav.story': '品牌故事',
+                'hero.title': 'Vangines黑头刮刀 & 冰敷滚轮',
+                'hero.slogan': 'Care Simply, Love Gently',
+                'hero.description': '深层清洁毛孔，有效去除黑头、白头及油脂，让肌肤恢复自然透亮。安全不伤肤。',
+                'hero.btn1': '了解更多',
+                'hero.btn2': '使用方法',
+                'hero.slide2.title': '滚轮冰敷消肿+黑头铲洁净',
+                'hero.slide2.slogan': '温柔呵护每一寸肌肤',
+                'hero.btn3': '品牌故事',
+                'hero.title2': '创新二合一设计',
+                'hero.description2': '结合冰敷滚轮与黑头铲功能，一机两用，满足多重护肤需求。',
+                'hero.title3': '简约护肤新理念',
+                'hero.description3': '让专业美容变得简单，给予肌肤最温柔的呵护。',
+                'product.title': '产品展示',
+                'product.subtitle': '创新二合一设计，兼顾美学与实用，每一处细节都为舒适体验打造',
+                'product.card1.title': '产品整体展示',
+                'product.card2.title': '冰敷滚轮细节',
+                'product.card3.title': '黑头铲功能区',
+                'features.title': '功能介绍',
+                'features.feature1.title': '冰敷滚轮',
+                'features.feature1.content': '304不锈钢镜面滚轮，冷藏后使用可快速收缩毛孔、镇静泛红肌肤，减轻水肿和敏感问题。滚轮直径3.2cm黄金尺寸，贴合面部曲线，轻轻滚动即可促进血液循环，搭配护肤品使用可提升吸收效果30%以上。',
+                'features.feature2.title': '黑头铲',
+                'features.feature2.content': '采用304不锈钢黑头铲，超薄0.8mm铲头设计，45°斜角贴合肌肤可深入清洁毛孔内的黑头、白头、油脂粒和老化角质，不伤肤且清洁彻底，搭配热敷使用效果更佳。',
+                'features.feature3.title': '替换头设计',
+                'features.feature3.content': '配备两种不同纹理硅胶替换头:点状适合日常按摩，波浪纹可深层放松肌肉。硅胶采用食品级材质，安全无异味，替换简单，满足不同按摩需求。',
+                'features.feature4.title': '人体工学设计',
+                'features.feature4.content': '基于1000+人手数据研发的握柄曲线，16.5cm黄金长度，38g轻量化设计，无论是单手操作还是多角度清洁，都能轻松掌控，长时间使用不疲劳。',
+                'usage.title': '使用方法',
+                'usage.step1.title': '第一步：使用前准备',
+                'usage.step1.item1': '滚轮冷藏：放入冰箱冷藏室（0-10℃）冷藏 15-20 分钟（勿冷冻）',
+                'usage.step1.item2': '面部清洁：洁面后，用热毛巾热敷面部 3-5 分钟，打开毛孔',
+                'usage.step1.item3': '工具检查：检查铲头是否干净、无损坏',
+                'usage.step2.title': '第二步：深层清洁（黑头铲使用）',
+                'usage.step2.item1': '手持握柄，黑头铲以 45° 角贴合肌肤，从下巴向鼻翼、额头向眉心轻轻滑动',
+                'usage.step2.item2': '重点清洁黑头重灾区（鼻翼、下巴），每处滑动不超过 2 次，力度轻柔',
+                'usage.step2.item3': '清洁后用干净化妆棉擦拭面部残留污垢，轻拍清水洗净',
+                'usage.step3.title': '第三步：冰敷舒缓（滚轮使用）',
+                'usage.step3.item1': '取出冷藏滚轮，从面部中央向两侧轻轻滚动',
+                'usage.step3.item2': '每部位滚动 3-5 次，重点按摩泛红、毛孔粗大区域，舒缓镇静',
+                'usage.step3.item3': '滚轮使用后，正常涂抹精华、乳液、面霜，促进吸收',
+                'usage.step4.title': '第四步：工具清洁收纳',
+                'usage.step4.item1': '滚轮、黑头铲、硅胶头，用温水 + 中性清洁剂冲洗干净',
+                'usage.step4.item2': '用干净毛巾擦干，避免水渍残留；硅胶头可定期高温消毒（≤60℃）',
+                'usage.step4.item3': '放入收纳盒，置于阴凉干燥处，避免阳光直射',
+                'usage.notes.title': '重要注意事项',
+                'usage.notes.item1': '敏感肌初次使用前，建议先在耳后做皮肤测试，无不适再上脸',
+                'usage.notes.item2': '滚轮冷藏时间不超过 2 小时，避免冻伤肌肤；禁止用滚轮直接接触眼周',
+                'usage.notes.item3': '黑头铲禁止用力按压，以免损伤角质层；破损、发炎肌肤暂停使用',
+                'usage.notes.item4': '每周使用 2-3 次为宜，过度清洁易损伤肌肤屏障，孕妇可正常使用',
+                'usage.notes.item5': '工具专人专用，避免交叉使用，硅胶替换头建议半年更换 1 次',
+                'usage.scenarios.title': '使用场景',
+                'usage.scenarios.scenario1.title': '晨间护肤场景',
+                'usage.scenarios.scenario1.content': '晨起水肿星人必备，冷藏滚轮 1 分钟消肿，收缩毛孔，后续底妆不卡粉、更服帖，开启精致一天',
+                'usage.scenarios.scenario2.title': '晚间护肤场景',
+                'usage.scenarios.scenario2.content': '洁面后用黑头铲清洁毛孔，再用滚轮舒缓肌肤，提升精华吸收效率，夜间修护事半功倍',
+                'usage.scenarios.scenario3.title': '出差旅行场景',
+                'usage.scenarios.scenario3.content': '轻量化设计（38g），无需插电，简单收纳，应对出差水土不服、旅行晒后泛红，随身呵护肌肤',
+                'story.title': '品牌故事',
+                'story.p1': 'VANGINES诞生于2025年，源于创始人对"简约而不简单"的护肤理念的追求。我们发现，现代女性的化妆台上总是堆满了各种护肤工具，复杂的使用流程让护肤变成了一种负担。',
+                'story.p2': '为此，我们集结了工业设计、皮肤科学、人体工学领域的专业团队，耗时18个月，经过5轮产品迭代，终于将冰敷滚轮与黑头铲这两种高频使用的护肤工具巧妙结合，打造出这款二合一产品。',
+                'story.p3': '"Care simply, Love Gently"不仅是我们的口号，更是我们的产品哲学。我们坚持选用食品级安全材质，每一个弧度、每一个尺寸都经过精准测算，只为让您在护肤过程中，既能享受高效的护理效果，又能感受到温柔与舒适。',
+                'story.p4': 'VANGINES相信，真正的轻奢护肤，不是堆砌昂贵的产品，而是用简约的方式，给肌肤最需要的呵护。',
+                'footer.text': 'VANGINES 始终坚持 "安全、温和、有效" 的护肤理念，每一款产品都经过严格质检，只为给你轻奢护肤体验。'
+            },
+            en: {
+                'nav.home': 'Home',
+                'nav.product': 'Product',
+                'nav.features': 'Features',
+                'nav.usage': 'How to Use',
+                'nav.story': 'Brand Story',
+                'hero.title': 'Vangines Blackhead Remover & Ice Roller',
+                'hero.slogan': 'Care Simply, Love Gently',
+                'hero.description': 'Deeply cleans pores, effectively removes blackheads, whiteheads and excess oil, restoring the skin\'s natural radiance. Safe and non-irritating to the skin.',
+                'hero.btn1': 'Learn More',
+                'hero.btn2': 'How to Use',
+                'hero.slide2.title': 'Ice Roller Reduces Swelling + Blackhead Remover Cleanses',
+                'hero.slide2.slogan': 'Gentle Care for Every Inch of Your Skin',
+                'hero.btn3': 'Brand Story',
+                'hero.title2': 'Innovative 2-in-1 Design',
+                'hero.description2': 'Combining ice roller and blackhead remover functions, one device for multiple skincare needs.',
+                'hero.title3': 'Simple Skincare Philosophy',
+                'hero.description3': 'Making professional beauty simple, providing the gentlest care for your skin.',
+                'product.title': 'Product Display',
+                'product.subtitle': 'Innovative 2-in-1 design that balances aesthetics and practicality, with every detail crafted for a comfortable user experience.',
+                'product.card1.title': 'Overall Product Display',
+                'product.card2.title': 'Ice Roller Details',
+                'product.card3.title': 'Blackhead Remover Function Area',
+                'features.title': 'Function Introduction',
+                'features.feature1.title': 'Ice Roller',
+                'features.feature1.content': 'Featuring a 304 stainless steel mirror roller, when used after refrigeration, it quickly shrinks pores, soothes red and irritated skin, and reduces swelling and sensitivity. With an optimal 3.2cm roller diameter, it fits the facial curves perfectly. Gentle rolling promotes blood circulation, and when paired with skincare products, it enhances absorption by over 30%.',
+                'features.feature2.title': 'Blackhead Remover',
+                'features.feature2.content': 'Made of 304 stainless steel, the remover boasts an ultra-thin 0.8mm blade with a 45° bevel. It fits closely to the skin to deeply clean pores of blackheads, whiteheads, oil granules and dead skin cells—thorough yet non-irritating. For better results, use with a warm compress beforehand.',
+                'features.feature3.title': 'Replaceable Head Design',
+                'features.feature3.content': 'Comes with two silicone replacement heads of different textures: the dotted one for daily massage and the wavy one for deep muscle relaxation. Crafted from food-grade silicone, they are safe, odorless and easy to replace, meeting diverse massage needs.',
+                'features.feature4.title': 'Ergonomic Design',
+                'features.feature4.content': 'The handle curve is developed based on data from over 1,000 hands, with an optimal length of 16.5cm and a lightweight 38g design. Whether for one-handed operation or multi-angle cleaning, it\'s easy to control and won\'t cause fatigue even with prolonged use.',
+                'usage.title': 'How to Use',
+                'usage.step1.title': 'Step 1: Pre-Use Preparation',
+                'usage.step1.item1': 'Refrigerate the roller: Place in the refrigerator (0-10℃) for 15-20 minutes (do not freeze).',
+                'usage.step1.item2': 'Cleanse the face: After cleansing, apply a warm towel to the face for 3-5 minutes to open pores.',
+                'usage.step1.item3': 'Inspect the tool: Check that the blade is clean and undamaged.',
+                'usage.step2.title': 'Step 2: Deep Cleaning (Using the Blackhead Remover)',
+                'usage.step2.item1': 'Hold the handle, place the blackhead remover at a 45° angle to the skin, and gently glide from the chin to the nasal alae, and from the forehead to the glabella.',
+                'usage.step2.item2': 'Focus on blackhead-prone areas (nasal alae, chin), gliding no more than 2 times per area with light pressure.',
+                'usage.step2.item3': 'After cleaning, wipe residual dirt from the face with a clean cotton pad and pat dry with clean water.',
+                'usage.step3.title': 'Step 3: Ice Soothing (Using the Roller)',
+                'usage.step3.item1': 'Take out the refrigerated roller and gently roll from the center of the face to both sides.',
+                'usage.step3.item2': 'Roll each area 3-5 times, focusing on red, large-pore areas to soothe and calm the skin.',
+                'usage.step3.item3': 'After using the roller, apply serum, lotion and cream as usual to promote absorption.',
+                'usage.step4.title': 'Step 4: Tool Cleaning & Storage',
+                'usage.step4.item1': 'Rinse the roller, blackhead remover and silicone heads with warm water and neutral cleanser.',
+                'usage.step4.item2': 'Dry with a clean towel to avoid water residue; silicone heads can be high-temperature sterilized regularly (≤60℃).',
+                'usage.step4.item3': 'Store in the included storage case in a cool, dry place away from direct sunlight.',
+                'usage.notes.title': 'Important Notes',
+                'usage.notes.item1': 'For sensitive skin, perform a patch test behind the ear before first use. Proceed only if no discomfort occurs.',
+                'usage.notes.item2': 'Do not refrigerate the roller for more than 2 hours to avoid skin frostbite; do not use the roller directly around the eye area.',
+                'usage.notes.item3': 'Do not press hard with the blackhead remover to prevent damage to the stratum corneum; suspend use on broken or inflamed skin.',
+                'usage.notes.item4': 'Recommended use: 2-3 times a week. Over-cleansing may damage the skin barrier. Safe for pregnant women.',
+                'usage.notes.item5': 'For personal use only to avoid cross-contamination. Replace silicone heads every 6 months.',
+                'usage.scenarios.title': 'Usage Scenarios',
+                'usage.scenarios.scenario1.title': 'Morning Skincare',
+                'usage.scenarios.scenario1.content': 'A must-have for those with morning puffiness. Refrigerate the roller for 1 minute to reduce swelling and shrink pores, ensuring subsequent base makeup is long-lasting and flawless—start your elegant day.',
+                'usage.scenarios.scenario2.title': 'Evening Skincare',
+                'usage.scenarios.scenario2.content': 'After cleansing, use the blackhead remover to deep clean pores, then soothe with the roller to enhance serum absorption, doubling the effectiveness of nighttime repair.',
+                'usage.scenarios.scenario3.title': 'Business Trips & Travel',
+                'usage.scenarios.scenario3.content': 'Lightweight (38g) and cordless, it\'s easy to store. Ideal for combating skin discomfort from travel and post-sun redness, providing on-the-go skin care.',
+                'story.title': 'Brand Story',
+                'story.p1': 'Founded in 2025, VANGINES was born from the founder\'s pursuit of the skincare philosophy of "Simplicity Without Compromise". We noticed that modern women\'s vanity tables are often cluttered with various skincare tools, and complicated usage procedures turn skincare into a burden.',
+                'story.p2': 'To address this, we assembled a professional team specializing in industrial design, skin science and ergonomics. After 18 months of development and 5 product iterations, we successfully combined two frequently used skincare tools—the ice roller and blackhead remover—into this innovative 2-in-1 product.',
+                'story.p3': '"Care Simply, Love Gently" is more than just our slogan; it\'s our product philosophy. We insist on using food-grade safe materials, and every curve and dimension is precisely calculated. Our goal is to let you enjoy efficient skincare results while experiencing tenderness and comfort during the process.',
+                'story.p4': 'VANGINES believes that true luxury skincare is not about piling up expensive products, but about providing the skin with the care it truly needs in a simple way.',
+                'footer.text': 'VANGINES always adheres to the skincare concept of "Safety, Gentleness, and Efficacy". Every product undergoes strict quality inspection to bring you a premium skincare experience.'
+            }
+        };
+
+        // 当前语言
+        let currentLang = 'zh';
+
+        // 语言切换函数
+        function switchLanguage(lang) {
+            currentLang = lang;
+            
+            // 更新按钮状态
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            // 更新页面内容
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+
+            // 更新HTML lang属性
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+        }
+
+        // 移动端菜单切换
+        function toggleMobileMenu() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+        }
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerHeight = 70;
+                    const targetPosition = targetElement.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    // 关闭移动端菜单
+                    const nav = document.getElementById('mainNav');
+                    nav.classList.remove('active');
+                }
+            });
+        });
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 默认中文
+            switchLanguage('zh');
+        });
+    </script>
+</body>
+</html>
